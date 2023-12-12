@@ -1,4 +1,4 @@
-package com.example.springbootjava.character;
+package com.example.springbootjava;
 
 import com.example.springbootjava.AsterixRepository;
 import com.example.springbootjava.Character;
@@ -24,8 +24,8 @@ public class AsterixService {
         repository.delete(remCharacter);
     }
 
-    public void updateCharacter(Character updateCharacter) {
-        repository.save(updateCharacter);
+    public Character updateCharacter(Character updateCharacter) {
+        return  repository.save(updateCharacter);
     }
 
     public void findAllCharacters(Character getAllCharacters) {

@@ -1,10 +1,7 @@
 package com.example.springbootjava;
 
-import com.example.springbootjava.character.AsterixService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,5 +18,8 @@ public class AsterixController {
 
     }
 
-
+    @PutMapping("{id}")
+    Character save(@PathVariable String id, @RequestBody Character character) {
+        return service.updateCharacter(character);
+    }
 }
